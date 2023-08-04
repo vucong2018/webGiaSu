@@ -1,15 +1,10 @@
 'use strict'
 
 const express = require('express');
-const routes = express.Router();
+const { apiKey } = require('../auth/checkAuth');
+const router = express.Router();
+router.use(apiKey)
+router.use('/v1/api', require('./access'))
 
-routes.use('/v1/api', require('./access'))
-// routes.get('/', (req, res, next) => {
-//     // const strCompress = 'Hel19.8.1lo Fantipjs'
-//     return res.status(200).json({
-//         message: 'Welcome VTC!',
-//         // metaData: strCompress.repeat(100000)
-//     })
-// })
 
-module.exports = routes
+module.exports = router
