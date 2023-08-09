@@ -3,9 +3,10 @@
 ### signup
 POST {{url_dev}}/shop/signup
 Content-Type: application/json
+x-api-key: e19e5d8fb311716b062d7327609148b10a7f8a951197ba7002d251027bcaf140ce8e4fa384953af6c958b59d37e8ca0197a6085696c165d3e24debc5223014e5
 
 {
     "name": "Shop Kongcute",
-    "email": "8123912@gmail.com",
+    "email": "noasd@gmail.com",
     "password": "noway"
 }
